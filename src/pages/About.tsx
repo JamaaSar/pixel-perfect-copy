@@ -67,21 +67,21 @@ const About = () => {
             variants={stagger}
           >
             <motion.div className="flex items-center gap-4 mb-8" variants={fadeUp}>
-              <div className="h-px w-16 bg-accent" />
-              <span className="text-accent text-sm font-medium tracking-widest uppercase">
+              <div className="h-px w-16 bg-primary-foreground/50" />
+              <span className="text-primary-foreground/70 text-xs font-medium tracking-widest uppercase">
                 About Us
               </span>
             </motion.div>
             
             <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-primary-foreground tracking-tight leading-[1.1]"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-tight leading-[1.1] uppercase"
               variants={fadeUp}
             >
               Where potential becomes permanence
             </motion.h1>
             
             <motion.p 
-              className="mt-8 text-xl text-primary-foreground/70 leading-relaxed max-w-2xl"
+              className="mt-8 text-base text-primary-foreground/70 leading-relaxed max-w-2xl"
               variants={fadeUp}
             >
               Our work is most relevant in asset-heavy, complex, and cyclical industries—particularly 

@@ -78,21 +78,21 @@ const Strategies = () => {
             variants={stagger}
           >
             <motion.div className="flex items-center gap-4 mb-8" variants={fadeUp}>
-              <div className="h-px w-16 bg-accent" />
-              <span className="text-accent text-sm font-medium tracking-widest uppercase">
+              <div className="h-px w-16 bg-primary-foreground/50" />
+              <span className="text-primary-foreground/70 text-xs font-medium tracking-widest uppercase">
                 Operational Strategies
               </span>
             </motion.div>
             
             <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-primary-foreground tracking-tight leading-[1.1]"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-tight leading-[1.1] uppercase"
               variants={fadeUp}
             >
               Evergreen industrial stewardship
             </motion.h1>
             
             <motion.p 
-              className="mt-8 text-xl text-primary-foreground/70 leading-relaxed max-w-2xl"
+              className="mt-8 text-base text-primary-foreground/70 leading-relaxed max-w-2xl"
               variants={fadeUp}
             >
               Pax Mongolica operates as a private investment office guided by the principles of an 
@@ -150,22 +150,22 @@ const Strategies = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-sm bg-accent/10 flex items-center justify-center">
-                <TrendingUp className="h-6 w-6 text-accent" />
+              <div className="w-12 h-12 border border-border flex items-center justify-center">
+                <TrendingUp className="h-5 w-5 text-foreground" />
               </div>
-              <h3 className="text-2xl font-serif font-medium">Industrial Turnaround & Special Situations</h3>
+              <h3 className="text-xl font-bold uppercase">Industrial Turnaround & Special Situations</h3>
             </div>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground text-sm leading-relaxed mb-8">
               We engage in situations where businesses face structural or cyclical challenges, 
               but remain fundamentally viable over the long term. Investment decisions are guided 
               by prudence, patience, and a commitment to responsible stewardship.
             </p>
             <div className="space-y-4">
-              <p className="text-sm font-medium uppercase tracking-wider text-accent">Typical Characteristics</p>
+              <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Typical Characteristics</p>
               {turnaroundCharacteristics.map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
-                  <p className="text-muted-foreground">{item}</p>
+                  <div className="w-1 h-1 rounded-full bg-foreground mt-2 flex-shrink-0" />
+                  <p className="text-muted-foreground text-sm">{item}</p>
                 </div>
               ))}
             </div>
@@ -178,22 +178,22 @@ const Strategies = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-sm bg-accent/10 flex items-center justify-center">
-                <Building className="h-6 w-6 text-accent" />
+              <div className="w-12 h-12 border border-border flex items-center justify-center">
+                <Building className="h-5 w-5 text-foreground" />
               </div>
-              <h3 className="text-2xl font-serif font-medium">Value Creation Through Maturation</h3>
+              <h3 className="text-xl font-bold uppercase">Value Creation Through Maturation</h3>
             </div>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-muted-foreground text-sm leading-relaxed mb-8">
               At Pax Mongolica, value creation is understood as an institutional process, not a 
               financial exercise. We focus on strengthening the foundations that allow enterprises 
               to endure.
             </p>
             <div className="space-y-4">
-              <p className="text-sm font-medium uppercase tracking-wider text-accent">Our Work Commonly Involves</p>
+              <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Our Work Commonly Involves</p>
               {valueCreation.map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
-                  <p className="text-muted-foreground">{item}</p>
+                  <div className="w-1 h-1 rounded-full bg-foreground mt-2 flex-shrink-0" />
+                  <p className="text-muted-foreground text-sm">{item}</p>
                 </div>
               ))}
             </div>
@@ -235,8 +235,8 @@ const Strategies = () => {
               className="p-8 bg-card rounded-sm shadow-soft hover:shadow-card transition-shadow border border-border"
               variants={fadeUp}
             >
-              <h3 className="text-xl font-serif font-medium mb-4">{service.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+              <h3 className="text-base font-bold mb-4 uppercase">{service.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -248,8 +248,8 @@ const Strategies = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h4 className="text-lg font-serif font-medium mb-4">Our Advisory Philosophy</h4>
-          <p className="text-muted-foreground leading-relaxed">
+          <h4 className="text-base font-bold mb-4 uppercase">Our Advisory Philosophy</h4>
+          <p className="text-muted-foreground text-sm leading-relaxed">
             Unlike conventional consulting firms, Pax Mongolica does not deliver abstract frameworks 
             or generic recommendations. Our advisory work is execution-oriented, context-specific, 
             and grounded in operational realities. We work directly with decision-makers to implement 
@@ -291,8 +291,8 @@ const Strategies = () => {
               className="p-6 bg-primary-foreground/5 rounded-sm border border-primary-foreground/10"
               variants={fadeUp}
             >
-              <area.icon className="h-8 w-8 text-accent mb-4" />
-              <p className="text-primary-foreground/80 text-sm leading-relaxed">{area.label}</p>
+              <area.icon className="h-6 w-6 text-primary-foreground/80 mb-4" />
+              <p className="text-primary-foreground/70 text-xs leading-relaxed uppercase">{area.label}</p>
             </motion.div>
           ))}
         </motion.div>

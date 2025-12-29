@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ['Playfair Display', 'Georgia', 'serif'],
-        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+        mono: ['Courier New', 'Courier', 'monospace'],
+        sans: ['Courier New', 'Courier', 'monospace'],
+        serif: ['Courier New', 'Courier', 'monospace'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,18 +52,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
+        gray: {
+          100: "hsl(var(--gray-100))",
+          200: "hsl(var(--gray-200))",
+          300: "hsl(var(--gray-300))",
+          400: "hsl(var(--gray-400))",
+          500: "hsl(var(--gray-500))",
+          600: "hsl(var(--gray-600))",
+          700: "hsl(var(--gray-700))",
+          800: "hsl(var(--gray-800))",
+          900: "hsl(var(--gray-900))",
         },
-        navy: {
-          DEFAULT: "hsl(var(--navy))",
-          light: "hsl(var(--navy-light))",
-        },
-        slate: "hsl(var(--slate))",
-        stone: "hsl(var(--stone))",
-        cream: "hsl(var(--cream))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -83,7 +83,6 @@ export default {
         soft: "var(--shadow-soft)",
         card: "var(--shadow-card)",
         elevated: "var(--shadow-elevated)",
-        gold: "var(--shadow-gold)",
       },
       keyframes: {
         "accordion-down": {

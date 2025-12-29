@@ -59,18 +59,18 @@ const Index = () => {
               className="flex items-center gap-4 mb-8"
               variants={fadeUp}
             >
-              <div className="h-px w-16 bg-accent" />
-              <span className="text-accent text-sm font-medium tracking-widest uppercase">
+              <div className="h-px w-16 bg-primary-foreground/50" />
+              <span className="text-primary-foreground/70 text-xs font-medium tracking-widest uppercase">
                 Private Investment Office
               </span>
             </motion.div>
             
             <motion.h1 
-              className="text-5xl md:text-6xl lg:text-7xl font-serif font-medium text-primary-foreground tracking-tight leading-[1.1]"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground tracking-tight leading-[1.1] uppercase"
               variants={fadeUp}
             >
               Potential into<br />
-              <span className="text-gradient-gold">Perpetuity</span>
+              Perpetuity
             </motion.h1>
             
             <motion.p 
@@ -127,7 +127,7 @@ const Index = () => {
               institutional foundations—governance, strategy, and operational discipline—that 
               allow businesses to remain resilient, competitive, and relevant over time.
             </p>
-            <Link to="/about" className="inline-flex items-center mt-8 text-accent font-medium hover:underline group">
+            <Link to="/about" className="inline-flex items-center mt-8 text-foreground font-medium hover:underline group">
               Learn more about us
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -140,12 +140,11 @@ const Index = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="aspect-[4/3] bg-secondary rounded-sm overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/10" />
+            <div className="aspect-[4/3] bg-secondary overflow-hidden relative border border-border">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-8">
-                  <div className="text-6xl font-serif font-light text-accent mb-4">"</div>
-                  <p className="text-xl font-serif italic text-foreground/80 max-w-md">
+                  <div className="text-6xl font-bold text-foreground/20 mb-4">"</div>
+                  <p className="text-lg italic text-foreground/80 max-w-md">
                     We work where long-term ownership, governance, and operational discipline 
                     determine whether enterprises endure.
                   </p>
@@ -153,7 +152,7 @@ const Index = () => {
               </div>
             </div>
             {/* Decorative corner */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-accent/30 -z-10" />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-border -z-10" />
           </motion.div>
         </div>
       </Section>
@@ -184,14 +183,14 @@ const Index = () => {
           {whatWeDo.map((item, index) => (
             <motion.div
               key={item.title}
-              className="group bg-card p-8 lg:p-10 rounded-sm shadow-card hover:shadow-elevated transition-shadow"
+              className="group bg-card p-8 lg:p-10 border border-border hover:shadow-card transition-shadow"
               variants={fadeUp}
             >
-              <div className="w-12 h-12 rounded-sm bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                <item.icon className="h-6 w-6 text-accent" />
+              <div className="w-12 h-12 border border-border flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors">
+                <item.icon className="h-5 w-5 text-foreground" />
               </div>
-              <h3 className="text-xl font-serif font-medium mb-4">{item.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+              <h3 className="text-lg font-bold mb-4 uppercase">{item.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -207,17 +206,17 @@ const Index = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="flex justify-center mb-8">
-              <div className="gold-line w-16" />
+              <div className="h-px w-16 bg-primary-foreground/30" />
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 uppercase">
               Ready to discuss opportunities?
             </h2>
-            <p className="text-lg text-primary-foreground/70 mb-10 max-w-xl mx-auto">
+            <p className="text-sm text-primary-foreground/70 mb-10 max-w-xl mx-auto">
               For investment opportunities, advisory engagements, or professional inquiries, 
               we welcome the opportunity to connect.
             </p>
             <Link to="/contact">
-              <Button size="lg" variant="secondary" className="group">
+              <Button size="lg" variant="secondary" className="group uppercase tracking-wider">
                 Contact Us
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>

@@ -26,7 +26,7 @@ export const Header = () => {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <span className="text-2xl font-serif font-semibold tracking-tight text-foreground group-hover:text-accent transition-colors">
+            <span className="text-lg font-bold tracking-tight text-foreground uppercase">
               Pax Mongolica
             </span>
           </Link>

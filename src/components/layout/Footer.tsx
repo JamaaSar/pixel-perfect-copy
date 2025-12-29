@@ -26,7 +26,7 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block">
-              <span className="text-2xl font-serif font-semibold tracking-tight">
+              <span className="text-lg font-bold tracking-tight uppercase">
                 Pax Mongolica
               </span>
             </Link>
@@ -34,12 +34,12 @@ export const Footer = () => {
               A private investment office specializing in complex industrial sectors, 
               focused on perpetual growth and disciplined stewardship.
             </p>
-            <div className="mt-6 gold-line" />
+            <div className="mt-6 h-px w-12 bg-primary-foreground/30" />
           </div>
 
           {/* Company Links */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-accent mb-4">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-primary-foreground/50 mb-4">
               Company
             </h3>
             <ul className="space-y-3">
@@ -58,7 +58,7 @@ export const Footer = () => {
 
           {/* Services Links */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-accent mb-4">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-primary-foreground/50 mb-4">
               Services
             </h3>
             <ul className="space-y-3">
@@ -77,7 +77,7 @@ export const Footer = () => {
 
           {/* Contact Links */}
           <div>
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-accent mb-4">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-primary-foreground/50 mb-4">
               Contact
             </h3>
             <ul className="space-y-3">

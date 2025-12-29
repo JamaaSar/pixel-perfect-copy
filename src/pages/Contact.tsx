@@ -120,21 +120,21 @@ const Contact = () => {
             variants={stagger}
           >
             <motion.div className="flex items-center gap-4 mb-8" variants={fadeUp}>
-              <div className="h-px w-16 bg-accent" />
-              <span className="text-accent text-sm font-medium tracking-widest uppercase">
+              <div className="h-px w-16 bg-primary-foreground/50" />
+              <span className="text-primary-foreground/70 text-xs font-medium tracking-widest uppercase">
                 Contact
               </span>
             </motion.div>
             
             <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-primary-foreground tracking-tight leading-[1.1]"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-tight leading-[1.1] uppercase"
               variants={fadeUp}
             >
               Get in touch
             </motion.h1>
             
             <motion.p 
-              className="mt-8 text-xl text-primary-foreground/70 leading-relaxed max-w-2xl"
+              className="mt-8 text-base text-primary-foreground/70 leading-relaxed max-w-2xl"
               variants={fadeUp}
             >
               Pax Mongolica welcomes inquiries related to investment opportunities, business advisory 
@@ -160,12 +160,12 @@ const Contact = () => {
             />
             <div className="mt-8 space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-sm bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-5 w-5 text-accent" />
+                <div className="w-10 h-10 border border-border flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-4 w-4 text-foreground" />
                 </div>
                 <div>
-                  <p className="font-medium mb-1">Head Office</p>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="font-bold mb-1 uppercase text-sm">Head Office</p>
+                  <p className="text-muted-foreground text-xs leading-relaxed">
                     17th Floor, City Tower<br />
                     Sukhbaatar Square 8/1<br />
                     Sukhbaatar District<br />
@@ -174,14 +174,14 @@ const Contact = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-sm bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="h-5 w-5 text-accent" />
+                <div className="w-10 h-10 border border-border flex items-center justify-center flex-shrink-0">
+                  <Mail className="h-4 w-4 text-foreground" />
                 </div>
                 <div>
-                  <p className="font-medium mb-1">Email</p>
+                  <p className="font-bold mb-1 uppercase text-sm">Email</p>
                   <a 
                     href="mailto:relations@paxmongolica.mn" 
-                    className="text-accent hover:underline text-sm"
+                    className="text-foreground hover:underline text-xs"
                   >
                     relations@paxmongolica.mn
                   </a>
@@ -198,9 +198,9 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-card p-8 lg:p-10 rounded-sm shadow-card">
-              <h3 className="text-2xl font-serif font-medium mb-2">Submit a Request</h3>
-              <p className="text-muted-foreground text-sm mb-8">
+            <div className="bg-card p-8 lg:p-10 border border-border">
+              <h3 className="text-xl font-bold mb-2 uppercase">Submit a Request</h3>
+              <p className="text-muted-foreground text-xs mb-8">
                 All requests are reviewed with discretion. Submission does not constitute an offer, 
                 commitment, or obligation.
               </p>
@@ -282,12 +282,12 @@ const Contact = () => {
           className="max-w-3xl mx-auto"
         >
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 rounded-sm bg-accent/10 flex items-center justify-center">
-              <AlertTriangle className="h-6 w-6 text-accent" />
+            <div className="w-12 h-12 border border-border flex items-center justify-center">
+              <AlertTriangle className="h-5 w-5 text-foreground" />
             </div>
             <div>
-              <h2 className="text-2xl font-serif font-medium">Whistleblowing Channel</h2>
-              <p className="text-muted-foreground text-sm">Confidential reporting</p>
+              <h2 className="text-xl font-bold uppercase">Whistleblowing Channel</h2>
+              <p className="text-muted-foreground text-xs">Confidential reporting</p>
             </div>
           </div>
 
