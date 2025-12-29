@@ -1,0 +1,322 @@
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Layout } from "@/components/layout/Layout";
+import { Section, SectionHeader } from "@/components/ui/section";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, TrendingUp, Building, Briefcase, Factory, Plane, Pickaxe, Landmark } from "lucide-react";
+
+const fadeUp = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] }
+};
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const turnaroundCharacteristics = [
+  "Strong asset foundations with underdeveloped strategy or governance",
+  "Cash-flow potential constrained by institutional weaknesses",
+  "Legacy ownership structures or succession-related challenges",
+  "Cyclical distress rather than irreversible decline"
+];
+
+const valueCreation = [
+  "Enhancing governance structures, reporting discipline, and accountability",
+  "Supporting management reinforcement and leadership continuity",
+  "Restoring capital discipline and balance-sheet resilience",
+  "Improving operational effectiveness in asset-intensive environments",
+  "Clarifying long-term strategic direction in domestic and export markets",
+  "Building trust and credibility with stakeholders, partners, and institutions"
+];
+
+const advisoryServices = [
+  {
+    title: "Turnaround & Restructuring",
+    description: "We support enterprises facing operational distress, structural inefficiencies, or cyclical downturns by diagnosing root causes and leading recovery programs."
+  },
+  {
+    title: "Governance & Institutional Design",
+    description: "We design and strengthen governance frameworks suited to complex enterprises, including board structure, shareholder alignment, and incentive systems."
+  },
+  {
+    title: "Capital Structure & Financial Discipline",
+    description: "We advise on capital allocation, balance-sheet resilience, and financial discipline in environments where misaligned capital structures undermine operations."
+  },
+  {
+    title: "Strategy, Repositioning & Scaling",
+    description: "We assist enterprises in redefining strategic direction, optimizing asset utilization, and repositioning within domestic and international markets."
+  }
+];
+
+const focusAreas = [
+  { icon: Factory, label: "Heavy industry and industrial services" },
+  { icon: Pickaxe, label: "Mining and resource-linked infrastructure" },
+  { icon: Plane, label: "Logistics and cargo aviation ecosystems" },
+  { icon: Landmark, label: "Investment banking and transaction-oriented mandates" }
+];
+
+const Strategies = () => {
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="relative py-32 lg:py-40 bg-hero overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-1/3 right-1/4 w-80 h-80 border border-primary-foreground/20 rotate-45" />
+        </div>
+        
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <motion.div 
+            className="max-w-4xl"
+            initial="initial"
+            animate="animate"
+            variants={stagger}
+          >
+            <motion.div className="flex items-center gap-4 mb-8" variants={fadeUp}>
+              <div className="h-px w-16 bg-accent" />
+              <span className="text-accent text-sm font-medium tracking-widest uppercase">
+                Operational Strategies
+              </span>
+            </motion.div>
+            
+            <motion.h1 
+              className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-primary-foreground tracking-tight leading-[1.1]"
+              variants={fadeUp}
+            >
+              Evergreen industrial stewardship
+            </motion.h1>
+            
+            <motion.p 
+              className="mt-8 text-xl text-primary-foreground/70 leading-relaxed max-w-2xl"
+              variants={fadeUp}
+            >
+              Pax Mongolica operates as a private investment office guided by the principles of an 
+              evergreen industrial holding. Our work is shaped by patience, continuity, and a 
+              long-term view of ownership.
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <Section>
+        <div className="max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              We do not structure our activities around predetermined exit timelines or fixed capital 
+              return cycles. Capital is reinvested with care, allowing value to develop gradually 
+              through improved governance, operational discipline, and strategic alignment.
+            </p>
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+              Our approach is most relevant in asset-heavy, complex, and cyclical industries. In such 
+              environments, challenges often arise not from a lack of resources, but from insufficient 
+              institutional depth. We aim to contribute where thoughtful ownership, measured capital 
+              allocation, and consistent stewardship can help enterprises regain stability and direction.
+            </p>
+          </motion.div>
+        </div>
+      </Section>
+
+      {/* Investment Solutions */}
+      <Section variant="subtle" id="investment">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <SectionHeader
+            label="Investment Solutions"
+            title="Capital aligned with continuity"
+            description="Our equity strategies focus on Mongolia and similarly complex markets, investing in underperforming companies across heavy industries and traditional sectors."
+          />
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-16 mt-16">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-sm bg-accent/10 flex items-center justify-center">
+                <TrendingUp className="h-6 w-6 text-accent" />
+              </div>
+              <h3 className="text-2xl font-serif font-medium">Industrial Turnaround & Special Situations</h3>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              We engage in situations where businesses face structural or cyclical challenges, 
+              but remain fundamentally viable over the long term. Investment decisions are guided 
+              by prudence, patience, and a commitment to responsible stewardship.
+            </p>
+            <div className="space-y-4">
+              <p className="text-sm font-medium uppercase tracking-wider text-accent">Typical Characteristics</p>
+              {turnaroundCharacteristics.map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                  <p className="text-muted-foreground">{item}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-sm bg-accent/10 flex items-center justify-center">
+                <Building className="h-6 w-6 text-accent" />
+              </div>
+              <h3 className="text-2xl font-serif font-medium">Value Creation Through Maturation</h3>
+            </div>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              At Pax Mongolica, value creation is understood as an institutional process, not a 
+              financial exercise. We focus on strengthening the foundations that allow enterprises 
+              to endure.
+            </p>
+            <div className="space-y-4">
+              <p className="text-sm font-medium uppercase tracking-wider text-accent">Our Work Commonly Involves</p>
+              {valueCreation.map((item, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                  <p className="text-muted-foreground">{item}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </Section>
+
+      {/* Business Advisory */}
+      <Section id="advisory">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <SectionHeader
+            label="Business Advisory"
+            title="Institutional advisory for complex enterprises"
+            description="Pax Mongolica provides independent business advisory services to enterprises operating in complex, asset-heavy, and institutionally constrained environments."
+          />
+        </motion.div>
+
+        <p className="mt-8 text-muted-foreground leading-relaxed max-w-3xl">
+          Advisory engagements do not require equity participation or capital investment. We advise 
+          owners, boards, management teams, and institutions seeking structural improvement, recovery, 
+          or strategic repositioning—regardless of whether Pax Mongolica is an investor.
+        </p>
+
+        <motion.div 
+          className="grid md:grid-cols-2 gap-6 mt-12"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={stagger}
+        >
+          {advisoryServices.map((service) => (
+            <motion.div
+              key={service.title}
+              className="p-8 bg-card rounded-sm shadow-soft hover:shadow-card transition-shadow border border-border"
+              variants={fadeUp}
+            >
+              <h3 className="text-xl font-serif font-medium mb-4">{service.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div 
+          className="mt-12 p-8 bg-secondary rounded-sm"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h4 className="text-lg font-serif font-medium mb-4">Our Advisory Philosophy</h4>
+          <p className="text-muted-foreground leading-relaxed">
+            Unlike conventional consulting firms, Pax Mongolica does not deliver abstract frameworks 
+            or generic recommendations. Our advisory work is execution-oriented, context-specific, 
+            and grounded in operational realities. We work directly with decision-makers to implement 
+            governance changes, support leadership transitions, rebuild institutional capacity, and 
+            restore strategic coherence.
+          </p>
+        </motion.div>
+      </Section>
+
+      {/* Portfolio */}
+      <Section variant="dark" id="portfolio">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl"
+        >
+          <SectionHeader
+            label="Portfolio"
+            title="Disciplined stewardship for long-term value"
+          />
+          <p className="mt-8 text-primary-foreground/70 leading-relaxed">
+            We are owners of our portfolio, disciplined to deliver long-term value with stewardship. 
+            We selectively share portfolio and transaction experience with qualified counterparties.
+          </p>
+        </motion.div>
+
+        <motion.div 
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={stagger}
+        >
+          {focusAreas.map((area) => (
+            <motion.div
+              key={area.label}
+              className="p-6 bg-primary-foreground/5 rounded-sm border border-primary-foreground/10"
+              variants={fadeUp}
+            >
+              <area.icon className="h-8 w-8 text-accent mb-4" />
+              <p className="text-primary-foreground/80 text-sm leading-relaxed">{area.label}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div 
+          className="mt-12 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="text-primary-foreground/70 mb-6">
+            If you are requesting additional information, please visit our Contact page.
+          </p>
+          <Link to="/contact">
+            <Button size="lg" variant="secondary" className="group">
+              Submit a Request
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+        </motion.div>
+      </Section>
+    </Layout>
+  );
+};
+
+export default Strategies;
