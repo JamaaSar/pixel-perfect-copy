@@ -1,13 +1,231 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Layout } from "@/components/layout/Layout";
+import { Section, SectionHeader } from "@/components/ui/section";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Building2, TrendingUp, RefreshCw } from "lucide-react";
+
+const fadeUp = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] }
+};
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const whatWeDo = [
+  {
+    icon: Building2,
+    title: "Long-Term Capital",
+    description: "We provide patient, permanent capital aligned with continuity, stability, and responsible ownership."
+  },
+  {
+    icon: TrendingUp,
+    title: "Operational Stewardship",
+    description: "We engage with governance, strategy, and execution to support institutional strengthening and long-term performance."
+  },
+  {
+    icon: RefreshCw,
+    title: "Turnaround & Maturation",
+    description: "We work with asset-rich but institutionally underdeveloped enterprises, guiding recovery, rebuilding, and gradual maturation."
+  }
+];
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <Layout>
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center bg-hero overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 border border-primary-foreground/20 rotate-45" />
+          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 border border-primary-foreground/20 rotate-12" />
+        </div>
+        
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <motion.div 
+            className="max-w-4xl"
+            initial="initial"
+            animate="animate"
+            variants={stagger}
+          >
+            <motion.div 
+              className="flex items-center gap-4 mb-8"
+              variants={fadeUp}
+            >
+              <div className="h-px w-16 bg-accent" />
+              <span className="text-accent text-sm font-medium tracking-widest uppercase">
+                Private Investment Office
+              </span>
+            </motion.div>
+            
+            <motion.h1 
+              className="text-5xl md:text-6xl lg:text-7xl font-serif font-medium text-primary-foreground tracking-tight leading-[1.1]"
+              variants={fadeUp}
+            >
+              Potential into<br />
+              <span className="text-gradient-gold">Perpetuity</span>
+            </motion.h1>
+            
+            <motion.p 
+              className="mt-8 text-xl md:text-2xl text-primary-foreground/70 leading-relaxed max-w-2xl"
+              variants={fadeUp}
+            >
+              Pax Mongolica is a private investment office specializing in complex industrial sectors, 
+              focused on perpetual growth, institutional development, and disciplined turnaround strategies.
+            </motion.p>
+            
+            <motion.div 
+              className="mt-12 flex flex-col sm:flex-row gap-4"
+              variants={fadeUp}
+            >
+              <Link to="/about">
+                <Button size="lg" variant="secondary" className="group">
+                  Discover Our Approach
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                  Get in Touch
+                </Button>
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Bottom gradient */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      </section>
+
+      {/* Our Approach Section */}
+      <Section>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <SectionHeader
+              label="Our Approach"
+              title="Long-term perspective shaped by patience and continuity"
+            />
+            <p className="mt-8 text-muted-foreground leading-relaxed">
+              Pax Mongolica operates with a long-term perspective shaped by patience, responsibility, 
+              and continuity. We deploy permanent capital and apply active stewardship to support 
+              enterprises through cycles, transitions, and structural change.
+            </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Rather than optimizing for speed or predefined exits, we focus on building the 
+              institutional foundations—governance, strategy, and operational discipline—that 
+              allow businesses to remain resilient, competitive, and relevant over time.
+            </p>
+            <Link to="/about" className="inline-flex items-center mt-8 text-accent font-medium hover:underline group">
+              Learn more about us
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
+          
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div className="aspect-[4/3] bg-secondary rounded-sm overflow-hidden relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/10" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="text-6xl font-serif font-light text-accent mb-4">"</div>
+                  <p className="text-xl font-serif italic text-foreground/80 max-w-md">
+                    We work where long-term ownership, governance, and operational discipline 
+                    determine whether enterprises endure.
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* Decorative corner */}
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-accent/30 -z-10" />
+          </motion.div>
+        </div>
+      </Section>
+
+      {/* What We Do Section */}
+      <Section variant="subtle">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <SectionHeader
+            label="What We Do"
+            title="Building enterprises that endure"
+            description="Our work is most relevant in asset-heavy, complex, and cyclical industries—particularly in emerging and resource-rich markets where long-term outcomes depend on institutional depth."
+            align="center"
+          />
+        </motion.div>
+
+        <motion.div 
+          className="grid md:grid-cols-3 gap-8 mt-16"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={stagger}
+        >
+          {whatWeDo.map((item, index) => (
+            <motion.div
+              key={item.title}
+              className="group bg-card p-8 lg:p-10 rounded-sm shadow-card hover:shadow-elevated transition-shadow"
+              variants={fadeUp}
+            >
+              <div className="w-12 h-12 rounded-sm bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+                <item.icon className="h-6 w-6 text-accent" />
+              </div>
+              <h3 className="text-xl font-serif font-medium mb-4">{item.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </Section>
+
+      {/* CTA Section */}
+      <Section variant="dark">
+        <div className="text-center max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="flex justify-center mb-8">
+              <div className="gold-line w-16" />
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium mb-6">
+              Ready to discuss opportunities?
+            </h2>
+            <p className="text-lg text-primary-foreground/70 mb-10 max-w-xl mx-auto">
+              For investment opportunities, advisory engagements, or professional inquiries, 
+              we welcome the opportunity to connect.
+            </p>
+            <Link to="/contact">
+              <Button size="lg" variant="secondary" className="group">
+                Contact Us
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+          </motion.div>
+        </div>
+      </Section>
+    </Layout>
   );
 };
 
