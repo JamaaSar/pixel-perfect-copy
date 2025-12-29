@@ -47,17 +47,17 @@ export const SectionHeader = ({
     )}>
       {label && (
         <div className={cn("flex items-center gap-4 mb-4", align === "center" && "justify-center")}>
-          <div className="gold-line" />
-          <span className="text-xs font-semibold uppercase tracking-widest text-accent">
+          <div className="h-px w-12 bg-foreground" />
+          <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
             {label}
           </span>
         </div>
       )}
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium tracking-tight">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight uppercase">
         {title}
       </h2>
       {description && (
-        <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+        <p className="mt-6 text-base text-muted-foreground leading-relaxed">
           {description}
         </p>
       )}
