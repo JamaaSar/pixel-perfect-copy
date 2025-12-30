@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 const footerLinks = {
   company: [
     { name: "About", href: "/about" },
-    { name: "Purpose & Values", href: "/about#values" },
-    { name: "Corporate Information", href: "/about#corporate" },
-    { name: "Leadership", href: "/about#leadership" },
+    { name: "Purpose & Values", href: "/about" },
+    { name: "Corporate Information", href: "/about" },
+    { name: "Leadership", href: "/about" },
   ],
   services: [
-    { name: "Investment Solutions", href: "/strategies#investment" },
-    { name: "Business Advisory", href: "/strategies#advisory" },
-    { name: "Portfolio", href: "/strategies#portfolio" },
+    { name: "Investment Solutions", href: "/strategies" },
+    { name: "Business Advisory", href: "/strategies" },
+    { name: "Portfolio", href: "/strategies" },
   ],
   contact: [
     { name: "Submit a Request", href: "/contact" },
-    { name: "Whistleblowing", href: "/contact#whistleblowing" },
+    { name: "General Inquiries", href: "/contact" },
   ],
 };
 
