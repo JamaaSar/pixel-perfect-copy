@@ -3,11 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.jpg";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Operational Strategies", href: "/strategies" },
+  { name: "Strategies", href: "/strategies" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -23,21 +24,19 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <nav className="container mx-auto px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <span className="text-lg font-bold tracking-tight text-foreground uppercase">
-              Pax Mongolica
-            </span>
+          <Link to="/" className="flex items-center gap-3">
+            <img src={logo} alt="Pax Mongolica" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:gap-8">
+          <div className="hidden lg:flex lg:items-center lg:gap-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`relative text-sm font-medium transition-colors py-2 ${
+                className={`relative px-4 py-2 text-xs uppercase tracking-widest transition-colors ${
                   isActive(item.href)
                     ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground"
@@ -47,14 +46,14 @@ export const Header = () => {
                 {isActive(item.href) && (
                   <motion.div
                     layoutId="underline"
-                    className="absolute -bottom-px left-0 right-0 h-0.5 bg-accent"
+                    className="absolute bottom-0 left-4 right-4 h-px bg-foreground"
                   />
                 )}
               </Link>
             ))}
-            <Link to="/contact">
-              <Button variant="default" size="sm" className="ml-4">
-                Submit a Request
+            <Link to="/contact" className="ml-4">
+              <Button variant="outline" size="sm" className="text-xs uppercase tracking-widest">
+                Request
               </Button>
             </Link>
           </div>
