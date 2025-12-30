@@ -124,7 +124,6 @@ const Contact = () => {
             <motion.h1
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-tight leading-[1.1] uppercase flex items-center gap-4"
               variants={fadeUp}>
-              <div className="h-px w-16 bg-primary-foreground/50" />
               Contact
             </motion.h1>
 
